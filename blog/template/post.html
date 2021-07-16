@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{%block body%}
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url({{url_for('static', filename='img/post-bg.jpg')}})">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>{{post.title}}</h1>
+            <h2 class="subheading">{{post.subtitle}}</h2>
+            <span class="meta">Posted by
+              <a href="#">{{post.author}}</a>
+              on {{post.date_posted.strftime('%B %d, %Y')}}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Post Content -->
+  <article>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <p>{{post.content}}</p>
+<!--          <h2 class="section-heading">The Final Frontier</h2>-->
+
+<!--          <blockquote class="blockquote">The dreams of yesterday are the hopes of today and the reality of tomorrow. Science has not yet mastered prophecy. We predict too much for the next year and yet far too little for the next ten.</blockquote>-->
+
+<!--          <a href="#">-->
+<!--            <img class="img-fluid" src="{{url_for('static', filename='img/post-sample-image.jpg')}}" alt="">-->
+<!--          </a>-->
+<!--          <span class="caption text-muted">To go places and do things that have never been done before – that’s what living is all about.</span>-->
+
+<!--          <p>Placeholder text by-->
+<!--            <a href="http://spaceipsum.com/">Space Ipsum</a>. Photographs by-->
+<!--            <a href="https://www.flickr.com/photos/nasacommons/">NASA on The Commons</a>.</p>-->
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <hr>
+
+{%endblock body%}
